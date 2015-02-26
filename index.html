@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>One Web on Many Different Networks</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    div[id$='bullets'].slide > div::after {
+      content: 'For Information only, do NOT present';
+      background: rgba(200,0,0,0.5);
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 5px 20px;
+      transform: rotate(90deg) translate(52%,-150px);
+      border-radius: 5px;
+    }
+    .full div[id$='bullets'].slide > div::after {
+      animation: wiggle alternate 1s infinite;
+    }
+    @keyframes wiggle {
+      from {
+        transform: rotate(90deg) translate(52%,-150px);
+      }
+      to {
+        transform: rotate(90deg) translate(52%,-160px);
+      }
+    }
+    .demourl {
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+  <h1>One Web - Many Devices and Networks</h1>
+    <p class="footer">
+      Patrick McManus and Dragana Damjanovic
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+<strong>Firefox OS is a free mobile operating system targetting low
+  end devices often found on lower end networks in emerging markets. Too often the legacy transport
+  mechanisms that serve well developed markets well fail to compellingly
+  deliver the same web on high latency networks - yet migrating to
+  better transport alternatives is hard.
+</strong>
+    </p>
+  </aside>
+
+<!-- 
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+  <h2>One Web - Many Devices and Networks</h2>
+
+      </header>
+      <img
+ src="pictures/neat/hobbes_firefox.png" 
+           class="middle shadow" height="350">
+
+      <small class="byline">
+      NEAT Kickoff - Patrick McManus and Dragana Damjanovic
+      </small>
+    </section>
+  </div></div>
+
+<!-- end slide block -->
+
+<!-- ===================================================================
+Firefox OS 
+======================================================================== -->
+
+  <div id="firefoxos" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS</h2>
+      </header>
+      <img src="pictures/neat/firefoxos.png" 
+           alt="Firefox OS" 
+           class="middle" height="450">
+    </section>
+  </div></div>
+
+  <div id="firefoxosbullet" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS</h2>
+      </header>
+      <ul class="longlist">
+        <li>Firefox OS is the only fully open mobile operating system based on web standards</li>
+        <li>It is aimed at markets that don't have access to the
+        current leading operating systems</li>
+	<li><b>Deals with vast range of networks and devices</b></li>
+        <li>It is fully web based, there is no native layer. The hardware access happens via a Linux core that is the same that powers Android</li>
+        <li>HTML5 is a first class citizen in Firefox OS - it is the OS that keeps the promises others gave us some years ago (No SDK needed)</li>
+        <li>Firefox OS is live - we have end user phones being sold in
+        Spain, Poland, Venezuela, India, Columbia, Japan, many more</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="ace" class="slide cover h"><div>
+    <section>
+      <header>
+        <h2>Phillipines Cherry Ace ($22)</h2>
+<h2>128MB RAM, 256MB of Flash, one limited camera and
+  occasional 3G </h2>
+      </header>
+      <img src="pictures/neat/Cherry-Mobile-Ace.jpg"
+           alt="Low End" 
+           class="middle shadow" height="450">
+    </section>
+  </div></div>
+
+  <div id="fx0" class="slide cover h"><div>
+    <section>
+      <header>
+        <h2>Japan KDDI FX0 $450</h2>
+ 
+<h2>1.5GB RAM, 16GB of Flash, two cameras, LTE, and nifty see-through case!<h2/>
+      </header>
+      <img src="pictures/neat/kddi.jpg"
+           alt="Low End" 
+           class="middle shadow" height="450">
+    </section>
+  </div></div>
+
+  <div id="q" class="slide"><div>
+    <section>
+      <header>
+        <h2>The Challenge</h2>
+      </header>
+      <figure class="right shadow frame">
+        <img src="pictures/neat/phones.jpg"
+             alt="Nokia couldn't take photos"
+             height="300">
+      </figure>
+      <ul class="inner">
+<li class="active">Transports that underperform with loss and latency</li>
+<li>Networks that discourage change</li>
+        <li >A breadth of network designs</li>
+        <li>A breadth of hardware</li>
+<li>Diverse opinions on privacy and security</li>
+        <li>One multifaceted networking stack</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="tools" class="slide"><div>
+    <section>
+      <header>
+        <h2>The Tools</h2>
+      </header>
+      <figure class="right shadow frame">
+        <img src="pictures/neat/panda.jpg"
+             alt="Nokia couldn't take photos"
+             height="300">
+      </figure>
+      <ul class="inner">
+        <li class="active">Desktop for Rapid Release with Telemetry</li>
+        <li>Million+ beta audience</li>
+        <li>Regular new phone builds</li>
+        <li>Potential Overlay Operator</li>
+      </ul>
+    </section>
+  </div></div>
+
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
