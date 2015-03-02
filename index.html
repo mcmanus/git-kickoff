@@ -110,7 +110,7 @@ Firefox OS
   <div id="firefoxosbullet" class="slide"><div>
     <section>
       <header>
-        <h2>Firefox OS</h2>
+        <h2>Firefox OS (skim this eyechart)</h2>
       </header>
       <ul class="longlist">
         <li>Firefox OS is the only fully open mobile operating system based on web standards</li>
@@ -154,7 +154,7 @@ Firefox OS
   <div id="q" class="slide"><div>
     <section>
       <header>
-        <h2>The Challenge</h2>
+        <h2>The Challenge - High Level</h2>
       </header>
       <figure class="right shadow frame">
         <img src="pictures/neat/phones.jpg"
@@ -168,6 +168,26 @@ Firefox OS
         <li>A breadth of hardware</li>
 <li>Diverse opinions on privacy and security</li>
         <li>One multifaceted networking stack</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="challengebullet" class="slide"><div>
+    <section>
+      <header>
+        <h2>The Usual Suspects (Requirements?)</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">TLS on TCP 443 is the one true port</li>
+        <li>Legacy sometimes underutilizes bwidth and handles loss poorly</li>
+	<li>Shifting properties and trust - mobility, captive portals, etc..</li>
+        <li>Layering pain (mtu and tls record size, ocsp
+        stapling and iw)</li>
+	<li>Power - scheduling and nat/KA</li>
+<li>Layers of dns/tcp/tls/ocsp/http create enormous handshake overhead</li>
+	  <li><b>Lots of good answers in literature - how to deploy
+	  and negotiate?</b></li>
+	  
       </ul>
     </section>
   </div></div>
